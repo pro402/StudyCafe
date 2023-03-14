@@ -10,3 +10,7 @@ It is an Android app that is made to learn and Develop with the help of free res
 ### Updates in Version2
 ##### Splash page and SignUp page 
 ##### Name == admin , Email == admin.admin , password == admin123
+
+## Version2.1 
+##### I have made some changes i.e, there were some bugs in the button operations .....
+##### And also for testing you can press enter with blank name , email and password (You can Try modifying it .....)
