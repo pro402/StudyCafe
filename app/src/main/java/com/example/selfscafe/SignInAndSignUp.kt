@@ -18,8 +18,6 @@ class SignInAndSignUp : AppCompatActivity() {
         val mailtxt = findViewById<TextInputEditText>(R.id.email)
         val passwdtxt = findViewById<TextInputEditText>(R.id.passwd)
         val enter = findViewById<Button>(R.id.enter)
-
-
         val context: Context = this
 
         enter.setOnClickListener {
@@ -33,6 +31,9 @@ class SignInAndSignUp : AppCompatActivity() {
                 finish()
             } else if (name.isBlank() || email.isBlank() || password.isBlank()) {
                 Toast.makeText(context, "Error: All fields are required.", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, MainActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(context, "Error: Invalid credentials.", Toast.LENGTH_SHORT).show()
             }

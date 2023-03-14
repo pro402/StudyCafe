@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HarryV">
+    tools:context=".kunalDAS">
 
     <WebView
-        android:id="@+id/harrwebb"
+        android:id="@+id/kunalDAS"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

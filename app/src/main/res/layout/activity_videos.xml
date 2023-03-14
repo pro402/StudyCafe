@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context=".videos">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="565dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,19 +26,29 @@
                 android:textSize="40dp"
                 android:textStyle="bold" />
 
-            <ImageView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/freecc"
                 android:layout_width="match_parent"
                 android:layout_height="133dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/purple_700"
-                android:src="@drawable/free" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="133dp"
+                    android:background="@color/purple_700"
+                    android:src="@drawable/free" />
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/kunalc"
                 android:layout_width="match_parent"
                 android:layout_height="133dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
                 android:backgroundTint="@color/kunal">
 
                 <ImageView
@@ -53,12 +64,15 @@
                     android:layout_marginLeft="120dp"
                     android:layout_marginTop="45dp"
                     android:text="Kunal Kushwaha"
-                    android:textSize="30dp"
+                    android:textSize="28dp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/saumyac"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="133dp"
                 android:layout_marginTop="20dp"
@@ -84,6 +98,9 @@
                 android:id="@+id/harry"
                 android:layout_width="match_parent"
                 android:layout_height="133dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="50dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/pp">
 
@@ -104,13 +121,5 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="222dp"
-        android:layout_height="59dp"
-        android:textSize="30dp"
-        android:layout_gravity="center"
-        android:text="Return" />
 
 </LinearLayout>
