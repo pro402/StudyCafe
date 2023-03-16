@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "300461935902",
+    "project_id": "selfscafe-cf06c",
+    "storage_bucket": "selfscafe-cf06c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300461935902:android:7eb08397ec983263410d0f",
+        "android_client_info": {
+          "package_name": "com.example.selfscafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300461935902-ttftl387mj54hoc825t3re8n7id5hoa3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC86JU7IrnJRAC56_AMSBN1GiJX3l3zTdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300461935902-ttftl387mj54hoc825t3re8n7id5hoa3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

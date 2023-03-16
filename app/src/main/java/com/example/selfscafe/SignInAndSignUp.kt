@@ -1,43 +1,55 @@
 package com.example.selfscafe
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignInAndSignUp : AppCompatActivity() {
+    lateinit var database : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in_and_sign_up)
 
-        val nametxt = findViewById<TextInputEditText>(R.id.name)
-        val mailtxt = findViewById<TextInputEditText>(R.id.email)
-        val passwdtxt = findViewById<TextInputEditText>(R.id.passwd)
-        val enter = findViewById<Button>(R.id.enter)
-        val context: Context = this
+        val signup=findViewById<Button>(R.id.enter)
+        val ename=findViewById<TextInputEditText>(R.id.name)
+        val eid=findViewById<TextInputEditText>(R.id.idd)
+        val emaal = findViewById<TextInputEditText>(R.id.email)
+        val ep=findViewById<TextInputEditText>(R.id.passwd)
+        val sin=findViewById<TextView>(R.id.SignIn)
 
-        enter.setOnClickListener {
-            val name = nametxt.text.toString()
-            val email= mailtxt.text.toString()
-            val password = passwdtxt.text.toString()
 
-            if (name == "admin" && email == "admin.admin" && password == "admin123") {
-                val intent = Intent(context, MainActivity::class.java)
-                startActivity(intent)
+        signup.setOnClickListener {
+
+            val name = ename.text.toString()
+            val email=emaal.text.toString()
+            val unid=eid.text.toString()
+            val upass=ep.text.toString()
+            val user = User(name,email,unid,upass)
+            database = FirebaseDatabase.getInstance().getReference("Users")
+            database.child(unid).setValue(user).addOnSuccessListener {
+                Toast.makeText(this,"Successfully Registered",Toast.LENGTH_SHORT).show()
+                val d=Intent(this,MainActivity::class.java)
+                startActivity(d)
                 finish()
-            } else if (name.isBlank() || email.isBlank() || password.isBlank()) {
-                Toast.makeText(context, "Error: All fields are required.", Toast.LENGTH_SHORT).show()
-                val intent = Intent(context, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                Toast.makeText(context, "Error: Invalid credentials.", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
             }
-        }
 
+            ename.setText("")
+            emaal.setText("")
+            ep.setText("")
+            eid.setText("")
+
+        }
+        sin.setOnClickListener{
+            intent = Intent(this,signin::class.java)
+            startActivity(intent)
+        }
     }
 }
