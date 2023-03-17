@@ -16,12 +16,6 @@ class freecamp : AppCompatActivity() {
         setContentView(R.layout.activity_freecamp)
         val wb=findViewById<WebView>(R.id.freewebb)
         webba(wb);
-        val butbt=findViewById<Button>(R.id.freebutten)
-
-        butbt.setOnClickListener {
-            val ds= Intent(this,videos::class.java)
-            startActivity(ds)
-        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

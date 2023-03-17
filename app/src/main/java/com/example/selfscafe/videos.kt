@@ -12,17 +12,11 @@ class videos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_videos)
 
-        val but=findViewById<Button>(R.id.button)
-        val fre=findViewById<ImageView>(R.id.freecc)
+        val fre=findViewById<CardView>(R.id.freecc)
         val kun=findViewById<CardView>(R.id.kunalc)
         val sua=findViewById<CardView>(R.id.saumyac)
         val harry=findViewById<CardView>(R.id.harry)
 
-
-        but.setOnClickListener {
-            val intt= Intent(this ,MainActivity::class.java)
-            startActivity(intt)
-        }
         fre.setOnClickListener{
             val itt=Intent(this,freecamp::class.java)
             startActivity(itt)

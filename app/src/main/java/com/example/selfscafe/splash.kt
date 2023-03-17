@@ -19,6 +19,6 @@ class splash : AppCompatActivity() {
             val i = Intent(this,SignInAndSignUp::class.java)
             startActivity(i)
             finish()
-        },2000)
+        },1000)
     }
 }
