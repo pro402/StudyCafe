@@ -16,12 +16,6 @@ class HarryV : AppCompatActivity() {
         setContentView(R.layout.activity_harry_v)
         val hb=findViewById<WebView>(R.id.harrwebb)
         hebba(hb);
-        val hutbt=findViewById<Button>(R.id.harrbutten)
-
-        hutbt.setOnClickListener {
-            val hs= Intent(this,videos::class.java)
-            startActivity(hs)
-        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

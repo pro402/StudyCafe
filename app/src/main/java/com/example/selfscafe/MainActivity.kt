@@ -1,5 +1,6 @@
 package com.example.selfscafe
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         val blog = findViewById<CardView>(R.id.card_view_2)
         val webr = findViewById<CardView>(R.id.card_view_3)
         val myblog = findViewById<CardView>(R.id.card_view_4)
+        val context: Context = this
 
         video.setOnClickListener {
             Toast.makeText(applicationContext,"Opening Videos",Toast.LENGTH_SHORT).show()
-
-            intent = Intent(applicationContext,videos::class.java)
+            val intent = Intent(context,videos::class.java)
             startActivity(intent)
         }
     }
