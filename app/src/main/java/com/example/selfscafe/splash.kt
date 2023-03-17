@@ -16,7 +16,7 @@ class splash : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val i = Intent(this,SignInAndSignUp::class.java)
+            val i = Intent(this,signin::class.java)
             startActivity(i)
             finish()
         },1000)
